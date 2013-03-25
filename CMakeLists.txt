@@ -6,6 +6,7 @@ include_directories("/usr/include/glib-2.0" "/usr/lib64/glib-2.0/include"
 link_directories(/usr/lib64/nbis)
 FIND_PACKAGE(SWIG REQUIRED)
 INCLUDE(${SWIG_USE_FILE})
+SET(CMAKE_SWIG_FLAGS -package "com.bah.biometrics")
 SWIG_ADD_MODULE(libbozorth java bozorth.i bozorth.c)
 SWIG_LINK_LIBRARIES(libbozorth bozorth3)
 install(FILES libbozorth.so DESTINATION usr/lib64)

@@ -19,8 +19,8 @@ Requires: java
 %build
 cmake . -DCMAKE_INSTALL_PREFIX=$RPM_BUILD_ROOT
 make
-javac *.java
-jar cvf bozorth.jar *.class
+javac -d . *.java
+jar cvf bozorth.jar com
 
 %install
 rm -rf $RPM_BUILD_ROOT
