@@ -1,6 +1,6 @@
 Name: bozorth          
 Version: 0.1       
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary: C library and Java wrapper around bozorth3 fingerprint matcher      
 
 License: Booz Allen Hamilton       
@@ -44,6 +44,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Mar 25 2013 Aaron Donovan <amdonov@gmail.com> 0.1-2
+- Putting Java classes in the com.bah.biometrics package (amdonov@gmail.com)
+- Merge branch 'master' of github.com:amdonov/bozorth (amdonov@gmail.com)
+- Initial commit (amdonov@gmail.com)
+
 * Sun Mar 24 2013 Aaron Donovan <amdonov@gmail.com> 0.1-1
 - new package built with tito
 
