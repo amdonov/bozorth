@@ -1,6 +1,6 @@
 Name: bozorth          
 Version: 0.1       
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary: C library and Java wrapper around bozorth3 fingerprint matcher      
 
 License: Booz Allen Hamilton       
@@ -44,6 +44,14 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Mar 28 2013 Aaron Donovan <amdonov@gmail.com> 0.1-3
+- Removing executable that was added briefly for testing (amdonov@gmail.com)
+- Changed the way I interact with the bozorth3 library Rather than use text-
+  based x, y, theta, quality data, I pass in a struct xyt_struct sized block of
+  data. This has the advantage of making templates all the same size, reduces
+  load time, and makes memory interactions between Java and C easier
+  (amdonov@gmail.com)
+
 * Mon Mar 25 2013 Aaron Donovan <amdonov@gmail.com> 0.1-2
 - Putting Java classes in the com.bah.biometrics package (amdonov@gmail.com)
 - Merge branch 'master' of github.com:amdonov/bozorth (amdonov@gmail.com)
