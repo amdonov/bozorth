@@ -9,6 +9,8 @@ INCLUDE(${SWIG_USE_FILE})
 SET(CMAKE_SWIG_FLAGS -package "com.bah.biometrics")
 SWIG_ADD_MODULE(libbozorth java bozorth.i bozorth.c)
 SWIG_LINK_LIBRARIES(libbozorth bozorth3)
+add_executable(bozorth main.c bozorth.c)
+target_link_libraries(bozorth bozorth3 m)
 install(FILES libbozorth.so DESTINATION usr/lib64)
 install(FILES bozorth.jar DESTINATION usr/share/java)
 
